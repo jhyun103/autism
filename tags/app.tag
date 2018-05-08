@@ -70,6 +70,39 @@
 
       console.log(justtooltip);
 
+      var justtooltip2 = [];
+      console.log(data);
+      justtooltip2[0] = data['week2']['m']['comment'];
+      justtooltip2[1] = data['week2']['t']['comment'];
+      justtooltip2[2] = data['week2']['w']['comment'];
+      justtooltip2[3] = data['week2']['r']['comment'];
+      justtooltip2[4] = data['week2']['f']['comment'];
+
+      console.log(justtooltip);
+
+      var justtooltip3 = [];
+      console.log(data);
+      justtooltip3[0] = data['week3']['m']['comment'];
+      justtooltip3[1] = data['week3']['t']['comment'];
+      justtooltip3[2] = data['week3']['w']['comment'];
+      justtooltip3[3] = data['week3']['r']['comment'];
+      justtooltip3[4] = data['week3']['f']['comment'];
+
+      console.log(justtooltip);
+
+      var justtooltip4 = [];
+      console.log(data);
+      justtooltip4[0] = data['week4']['m']['comment'];
+      justtooltip4[1] = data['week4']['t']['comment'];
+      justtooltip4[2] = data['week4']['w']['comment'];
+      justtooltip4[3] = data['week4']['r']['comment'];
+      justtooltip4[4] = data['week4']['f']['comment'];
+
+      console.log(justtooltip);
+
+
+
+
 
       var justScores = [];
       console.log(data);
@@ -195,32 +228,33 @@
         toolTip:{
 
 
+
         },
         options: {
         tooltips: {
-          enabled: false,
-          position: 'average',
-          custom: function(tooltipModel){
-            var tooltipEl = tag.refs.comment.value;
-
-
-            var position = this._chart.canvas.getBoundingClientRect();
-
-            tooltipEl.style.opacity = 1;
-            tooltipEl.style.position = 'absolute';
-            tooltipEl.style.left = position.left + tooltipModel.caretX + 'px';
-            tooltipEl.style.top = position.top + tooltipModel.caretY + 'px';
-
-
-          },
-          callbacks: {
-            label: function(tooltipItem, data) {
-              console.log('TOOLTIPITEM:', tooltipItem);
-              console.log('DATA:', data)
-              tag.tooltipData = tooltipItem;
-              tag.update();
-            }
-          }
+        // //  enabled: false,
+        //   position: 'average',
+        //   custom: function(tooltipModel){
+        //     var tooltipEl = tag.refs.comment.value;
+        //
+        //
+        //     var position = this._chart.canvas.getBoundingClientRect();
+        //
+        //     tooltipEl.style.opacity = 1;
+        //     tooltipEl.style.position = 'absolute';
+        //     tooltipEl.style.left = position.left + tooltipModel.caretX + 'px';
+        //     tooltipEl.style.top = position.top + tooltipModel.caretY + 'px';
+        //
+        //
+        //   },
+        //   callbacks: {
+        //     label: function(tooltipItem, data) {
+        //       console.log('TOOLTIPITEM:', tooltipItem);
+        //       console.log('DATA:', data)
+        //       tag.tooltipData = tooltipItem;
+        //       tag.update();
+        //     }
+        //   }
         }
       }
 
