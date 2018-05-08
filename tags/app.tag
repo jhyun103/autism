@@ -52,6 +52,7 @@
     setDay(e) {
       tag.day = tag.refs.dayOfWeek.value;
     }
+    
 
     scoresRef.on('value', function (snap) {
       var data = snap.val();
@@ -196,7 +197,11 @@
           
         },
         options: {
-          tooltips: {
+          tooltips:{
+            
+            mode: 'nearest'
+          }
+          /* tooltips: {
             enabled: false,
             position: 'average',
             custom: function (tooltipModel) {
@@ -216,7 +221,7 @@
               // this.chart.update();
             }
 
-          }
+          } */
 
         }
 
