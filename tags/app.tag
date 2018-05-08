@@ -35,6 +35,7 @@
   <button onclick={ setComment }>Enter comment</button>
   <br></br>
 
+  <p>week1: { justtooltip }</p>
 
   <custom-tooltip tooltip-data={ tooltipData }></custom-tooltip>
 
@@ -44,7 +45,10 @@
     this.toolText = "This is my text.";
   //  this.tooltipData = {};
     this.day = 'm';
-
+    this.justtooltip = [];
+this.justtooltip2 = [];
+this.justtooltip3 = [];
+this.justtooltip4 = [];
     setWeek(e) {
       tag.week = tag.refs.week.value;
     }
@@ -60,45 +64,40 @@
 
       //var tooltips= [];
 
-      var justtooltip = [];
+      tag.justtooltip[0] = data['week1']['m']['comment'];
+      tag.justtooltip[1] = data['week1']['t']['comment'];
+      tag.justtooltip[2] = data['week1']['w']['comment'];
+      tag.justtooltip[3] = data['week1']['r']['comment'];
+      tag.justtooltip[4] = data['week1']['f']['comment'];
+
+      //var justtooltip2 = [];
+      console.log(tag);
+
+      tag.justtooltip2[0] = data['week2']['m']['comment'];
+      tag.justtooltip2[1] = data['week2']['t']['comment'];
+      tag.justtooltip2[2] = data['week2']['w']['comment'];
+      tag.justtooltip2[3] = data['week2']['r']['comment'];
+      tag.justtooltip2[4] = data['week2']['f']['comment'];
+
+      console.log(tag.justtooltip);
+
+      //var justtooltip3 = [];
       console.log(data);
-      justtooltip[0] = data['week1']['m']['comment'];
-      justtooltip[1] = data['week1']['t']['comment'];
-      justtooltip[2] = data['week1']['w']['comment'];
-      justtooltip[3] = data['week1']['r']['comment'];
-      justtooltip[4] = data['week1']['f']['comment'];
+      tag.justtooltip3[0] = data['week3']['m']['comment'];
+      tag.justtooltip3[1] = data['week3']['t']['comment'];
+      tag.justtooltip3[2] = data['week3']['w']['comment'];
+      tag.justtooltip3[3] = data['week3']['r']['comment'];
+      tag.justtooltip3[4] = data['week3']['f']['comment'];
 
-      console.log(justtooltip);
 
-      var justtooltip2 = [];
+      //var justtooltip4 = [];
       console.log(data);
-      justtooltip2[0] = data['week2']['m']['comment'];
-      justtooltip2[1] = data['week2']['t']['comment'];
-      justtooltip2[2] = data['week2']['w']['comment'];
-      justtooltip2[3] = data['week2']['r']['comment'];
-      justtooltip2[4] = data['week2']['f']['comment'];
+      tag.justtooltip4[0] = data['week4']['m']['comment'];
+      tag.justtooltip4[1] = data['week4']['t']['comment'];
+      tag.justtooltip4[2] = data['week4']['w']['comment'];
+      tag.justtooltip4[3] = data['week4']['r']['comment'];
+      tag.justtooltip4[4] = data['week4']['f']['comment'];
 
-      console.log(justtooltip);
-
-      var justtooltip3 = [];
-      console.log(data);
-      justtooltip3[0] = data['week3']['m']['comment'];
-      justtooltip3[1] = data['week3']['t']['comment'];
-      justtooltip3[2] = data['week3']['w']['comment'];
-      justtooltip3[3] = data['week3']['r']['comment'];
-      justtooltip3[4] = data['week3']['f']['comment'];
-
-      console.log(justtooltip);
-
-      var justtooltip4 = [];
-      console.log(data);
-      justtooltip4[0] = data['week4']['m']['comment'];
-      justtooltip4[1] = data['week4']['t']['comment'];
-      justtooltip4[2] = data['week4']['w']['comment'];
-      justtooltip4[3] = data['week4']['r']['comment'];
-      justtooltip4[4] = data['week4']['f']['comment'];
-
-      console.log(justtooltip);
 
 
 
@@ -143,10 +142,9 @@
       tag.chart.data.datasets[2].data = week3Scores;
       tag.chart.data.datasets[3].data = week4Scores;
 
-      tag.tooltipData= justtooltip;
+      tag.tooltipData= tag.justtooltip[0];
       tag.chart.update();
-
-
+      tag.update();
     });
 
     setNumber(e) {
@@ -193,7 +191,7 @@
               // data: [10, 20, 30, 40, 50],
               lineTension: 0,
               backgroundColor: [
-                'rgba(100, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)'
+                'rgba(153, 102, 255, 0.2)'
               ],
               borderColor: [
                 'rgba(100,99,132,1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)'
